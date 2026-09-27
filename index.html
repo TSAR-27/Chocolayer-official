@@ -383,6 +383,14 @@
 </footer>
 
 <script>
+if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
+window.scrollTo(0,0);
+window.addEventListener('load', function(){
+  window.scrollTo(0,0);
+  setTimeout(function(){ window.scrollTo(0,0); }, 0);
+});
+</script>
+<script>
 (function(){
   var otherRadio = document.getElementById('qty-other-radio');
   var otherWrap = document.getElementById('qty-other-wrap');
